@@ -2,56 +2,131 @@ body, html {
     height: 100%;
     margin: 0;
 }
+.navbar{
+  height: 77px;
+}
+.navbar-brand{
+  font-family: 'Prosto One', cursive;
+  background-image: url('logo.png');
+    background-repeat: no-repeat;
+  width: 288px;
+  height: 95px;
+}
 .background{
-  background-image: url('background.jpg');
+  background-image: url('image.jpg');
   height: 100%;
   background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* Start Navbar */
 nav{
-  font-family: 'Pacifico', cursive;
+  font-family: 'Arvo', serif;
+  font-style: bold;
+
   font-size: 20px;
 }
 /* End Navbar */
-/* Start Video-Background */
-.homepage-video {
-  width: 100%;
-  max-width: 100%;
-  margin-top: 50px;
+/* Start Video */
+#text-left{
+  margin-left: 5%;
+  margin-right: auto;
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.video-container {
+#video{
+  display: block;
+  margin-left: auto;
+  margin-right: 5%;
   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.video-arrow-container {
-	position: absolute;
-	bottom: 20%;
-	width: 100%;
-	font-size: 40px;
-}
-.video-arrow-container span {
-	color: #fff;
-}
-.video-arrow-container a:hover {
-	text-decoration: none;
-}
-/* End Video-Background */
+/* End Video*/
 /* Start gallery */
-.gallery
-{
-    display: inline-block;
-    margin-top: 20px;
+#uslugi{
+  background: url("uslugi-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#vaprosi{
+  background: url("onemore.jpg");
+  width: 100%;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 15px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+   padding: 10px 0;
+}
+
+.section-white {
+  background: linear-gradient(180deg, #919391 50%, #15151f 50%);
 }
 /* End gallery */
+/* START DEALS carousel /uslugi */
+#carousel-inner{
+  border-radius: 0;
+}
+/* END DEALS carousel /uslugi */
+
 #box
 {
 	background: white;
 
-	-webkit-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.8);
 
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -109,6 +184,22 @@ nav{
 	padding: 50px;
 	font-size: 25px;
 }
+@media screen and (min-width: 768px) {
+
+  .section-white {
+     padding: 1.5em 0;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+
+  .container {
+    max-width: 930px;
+  }
+
+}
+
 @media (min-width: 768px) {
     .navbar .navbar-nav {
         display: inline-block;
@@ -127,3 +218,121 @@ nav{
         margin-right: -20px;
     }
 }
+.tablecenter{
+  margin-left: 5%;
+  margin-right: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pricingTable{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.pricingTable:hover .btn-block,
+.pricingTable:hover .price-value{
+    background: green;
+}
+.pricingTable > .pricingTable-header{
+    color:#333333;
+    padding-top: 40px;
+}
+.pricingTable-header > .price-value{
+    display: block;
+    padding: 25px 0;
+    background: #ff5722;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    font-size: 24px;
+    color:#fff;
+    transition: all 0.4s ease 0s;
+    font-weight: 700;
+}
+.price-value > .mo{
+    display: block;
+    font-size: 12px;
+}
+.pricingTable-header > .heading{
+    display: block;
+    padding-top: 20px;
+}
+.heading > h3{
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.pricingTable > .pricingContent{
+    margin-top: 30px;
+}
+.pricingTable > .pricingContent > ul{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+.pricingTable > .pricingContent > ul > li{
+    padding: 10px 0;
+    border-top: 1px solid #d6d6d6;
+}
+.pricingTable-sign-up{
+    padding: 40px 0;
+    border-top: 1px solid #d6d6d6;
+}
+.pricingTable-sign-up > .btn-block{
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border-radius: 0px;
+    background: #ff5722;
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 17px;
+    border: 0px none;
+    transition: all 0.4s ease 0s;
+}
+.mid .price-value,
+.mid .btn-block{
+    background: #ffa000;
+}
+@media screen and (max-width: 990px){
+    .pricingTable{
+        margin-bottom: 20px;
+    }
+}
+
+.faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+    .panel-group .panel+.panel{
+      margin-top: 55px;
+    }
+    .panel-heading [data-toggle="collapse"]:after {
+        font-family: 'fontawesome';
+        content: "\f054"; /* "play" icon */
+        float: right;
+        color: red;
+        font-size: 18px;
+        line-height: 22px;
+        /* rotate "play" icon from > (right arrow) to down arrow */
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .panel-heading [data-toggle="collapse"].collapsed:after {
+        /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: green;
+    }
+
+    #form_container input[type='text'],
+    #form_container input[type='email'],
+    #form_container textarea
