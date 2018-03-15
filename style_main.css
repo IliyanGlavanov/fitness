@@ -1,16 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
-}
-.navbar{
-  height: 77px;
-}
-.navbar-brand{
-  font-family: 'Prosto One', cursive;
-  background-image: url('logo.png');
-    background-repeat: no-repeat;
-  width: 288px;
-  height: 95px;
+    overflow-x:hidden;
 }
 .background{
   background-image: url('image.jpg');
@@ -19,16 +10,29 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#logo{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 /* Start Navbar */
+.navbar{
+  min-height: 60px;
+}
 nav{
   font-family: 'Arvo', serif;
   font-style: bold;
-
   font-size: 20px;
+}
+.navbar-default{
+  background-color: white;
+  border: 0;
 }
 /* End Navbar */
 /* Start Video */
 #text-left{
+  width:560px;
+  height: 315px;
   margin-left: 5%;
   margin-right: auto;
   position: relative;
@@ -50,14 +54,23 @@ nav{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 #vaprosi{
   background: url("onemore.jpg");
-  width: 100%;
-  height: 600px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
+#contact-me-margin{
+  margin-bottom: 80px;
+}
+#contact-me{
+  padding-bottom: 20px;
+  border-bottom: 1px solid red;
+}
+/* ------------------- Carousel Styling ------------------- */
+
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -67,8 +80,6 @@ nav{
   width: 100%;
   height: auto;
 }
-
-/* ------------------- Carousel Styling ------------------- */
 
 .carousel-inner {
   border-radius: 15px;
@@ -103,7 +114,6 @@ nav{
   background-image: none;
 }
 
-
 /* ------------------- Section Styling - Not needed for carousel styling ------------------- */
 
 .section-white {
@@ -114,6 +124,7 @@ nav{
   background: linear-gradient(180deg, #919391 50%, #15151f 50%);
 }
 /* End gallery */
+
 /* START DEALS carousel /uslugi */
 #carousel-inner{
   border-radius: 0;
@@ -184,40 +195,7 @@ nav{
 	padding: 50px;
 	font-size: 25px;
 }
-@media screen and (min-width: 768px) {
 
-  .section-white {
-     padding: 1.5em 0;
-  }
-
-}
-
-@media screen and (min-width: 992px) {
-
-  .container {
-    max-width: 930px;
-  }
-
-}
-
-@media (min-width: 768px) {
-    .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
-    }
-
-    .navbar .navbar-collapse {
-        text-align: center;
-    }
-}
-/*full width container*/
-@media (max-width: 767px) {
-    .block {
-        margin-left: -20px;
-        margin-right: -20px;
-    }
-}
 .tablecenter{
   margin-left: 5%;
   margin-right: auto;
@@ -300,7 +278,6 @@ nav{
         margin-bottom: 20px;
     }
 }
-
 .faqHeader {
         font-size: 27px;
         margin: 20px;
@@ -333,6 +310,84 @@ nav{
         color: green;
     }
 
+/* EMAIL FORM */
     #form_container input[type='text'],
     #form_container input[type='email'],
     #form_container textarea
+/* EMAIL FORM */
+
+/* ------------------------ START OF MEDIA QUERIES ----------------------- */
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media screen and (min-width: 768px) {
+  .section-white {
+     padding: 1.5em 0;
+  }
+  #bs-example-navbar-collapse-1{
+    text-align: center;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 930px;
+  }
+  #text-left{
+    width: 420px;
+    height: 250px;
+    display: block;
+    margin-left: 5%;
+    margin-right: auto;
+  }
+  #bs-example-navbar-collapse-1{
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+    #text-left{
+      width: 420px;
+      height: 250px;
+      display: block;
+      margin-left: 10%;
+      margin-right: auto;
+    }
+    #bs-example-navbar-collapse-1{
+      text-align: center;
+    }
+}
+/*full width container*/
+@media (max-width: 767px) {
+    .block {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    #text-left{
+      width: 420px;
+      height: 250px;
+      display: block;
+      margin-left: 10%;
+      margin-right: auto;
+    }
+    #bs-example-navbar-collapse-1{
+      text-align: center;
+    }
+}
+@media (max-width: 575px){
+  #text-left{
+    width: 320px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+}
+@media (min-width: 320px) and (max-width: 335px){
+  #logo{
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+#bs-example-navbar-collapse-1{
+  text-align: center;
+}
+}
+/* ------------------------ END OF MEDIA QUERIES ----------------------- */
